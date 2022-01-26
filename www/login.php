@@ -7,6 +7,7 @@ if(!($username==='demo' && $password==='demo')){
     echo ('Login failed!');
 }
 else{
+    echo ('proslo');
     $_SESSION['username']= $username;
-    header("secret.php");
+    header("Location: ./secret.php");
 }
