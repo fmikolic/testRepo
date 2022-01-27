@@ -21,6 +21,17 @@ services:
       - './docker/etc/php/php.ini:/usr/local/etc/php/php.ini'
       - './docker/etc/php/xxx-devilbox-default-php.ini:/usr/local/etc/php/conf.d/xxx-devilbox-default-php.ini'
       - './:/var/www:cached'
-
-
-
+    links:
+      - db
+  db:
+    image: mariadb:10.3.23
+    ports:
+      - 3309:3306
+    volumes:
+      - ./docker/data/mariadb:/var/lib/mysql
+      - ./docker/etc/mariadb/my.cnf:/etc/mysql/my.cnf
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: test2
+      MYSQL_PASSWORD: test2
+      MYSQL_DATABASE: test2

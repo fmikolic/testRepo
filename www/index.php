@@ -13,7 +13,7 @@
             var password = document.getElementById("password").value;
 
             if (!(username=="") && !(password =="")) {
-                alert("PRolazim");
+                alert("PRolazim empty check");
                 return true;
             }
             else

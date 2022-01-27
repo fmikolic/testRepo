@@ -1,11 +1,6 @@
 <?php
-include_once './data/config.php';
 
+echo ('secret unutra');
 
-if(isset($username)){
-    echo ($username);
-}else{
-    echo ('secret unutra');
-}
 
 
