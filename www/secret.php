@@ -1,7 +1,7 @@
 <?php
-session_start();
+include_once './data/config.php';
 
-$username=$_SESSION['username'];
+
 if(isset($username)){
     echo ($username);
 }else{
