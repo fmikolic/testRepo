@@ -26,18 +26,14 @@ session_start();
     $connect=openConnection(DBCONNECTIONDATA);
     $username1=$_SESSION['username'];
 
-
     $query="select secret_data.data from secret_data left join users on secret_data.user_id=users.id_user where users.username='".$username1."'";
     $result=mysqli_query($connect,$query);
     echo "<table class='table table-dark table-hover'>";
     echo "<thead><tr><th scope='col'>Data for user</th></tr></thead>";
-    if (!$result || mysqli_num_rows($result)===1){
-        if($row=mysqli_fetch_array($result))
-        echo "<tr><td>" . $row['data'] . "</td></tr><br>";
-    }
+        foreach($result as $row){
+            echo "<tr><td>" . $row['data'] . "</td></tr><br>";
+        }
     echo "</table>";
-
-
 
     closeConnection($connect);
     ?>
