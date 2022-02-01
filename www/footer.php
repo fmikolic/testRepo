@@ -1,3 +1,12 @@
 <?php
 ?>
-<h2 class="h2 mb-3 font-weight-normal"> FOOTER ovdje</h2>
+<div class="mt-auto fixed-bottom">
+    <div>
+        <img src="imgs/packaging.png" alt width="144" height="144">
+    </div>
+    <div>
+        <p class="mt-3 mb-3 text-muted">© 2022 Vježba</p>
+    </div>
+</>
+
+
