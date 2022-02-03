@@ -3,7 +3,6 @@ session_start();
 $title='User data';
 include('header.php');
 ?>
-
 <h2 class="h2 mb-3 font-weight-bold">Data for logged user</h2>
 <div class="table-responsive mx-auto" style="width: 35%; margin-bottom: 3%">
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light " style="opacity: 0.9">
@@ -21,9 +20,7 @@ include('header.php');
             echo "<tr><td>" . $row['data'] . "</td></tr>";
         }
         echo "</tbody></table>";
-
         closeConnection($connect);
-
         $adminRole = $_SESSION['isAdmin'];
         if ($adminRole == true) {
             ?>
@@ -41,7 +38,6 @@ include('header.php');
     </div>
 </div>
 <?php
-
 include('footer.php');
 ?>
 

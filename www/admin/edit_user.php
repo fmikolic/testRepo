@@ -51,6 +51,7 @@ if (isset($_POST['insert'])) {
     }
     return header("Location: ./users.php");
 }
+//update user
 if (isset($_POST['update'])) {
     $usernameUpdate = $_POST['username'];
     $password1Update = $_POST['password'];
@@ -125,14 +126,14 @@ include('../header.php');
                 </div>
             </div>
             <?php
-            if ($user_id=='') {
+            if ($user_id == '') {
                 ?>
                 <input class="btn btn-primary" type="submit" name="insert" value="Add user">
                 <?php
-            }else{
-            ?>
-            <input class="btn btn-primary" type="submit" name="update" value="Update">
-            <?php
+            } else {
+                ?>
+                <input class="btn btn-primary" type="submit" name="update" value="Update">
+                <?php
             }
             ?>
         </form>
